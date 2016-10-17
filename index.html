@@ -84,21 +84,21 @@
     <!-- Resume Section -->
     <section id="resume" class="container resume-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-12">
                 <h2>Resume</h2>
 		<div class="row">
 			<p> <i> Academic Qualifications </i> </p>
-			<ul >
-		   		<li> University of Southern California - MS Computer Science ( Expected Graduation - August 2016 )</li>
+			<ul class="col-lg-6 col-lg-offset-1">
+		   		<li> University of Southern California - MS Computer Science </li>
 		   		<li> PES School of Engineering - B.E. Computer Science </li>
 			</ul>
 		</div>
 		<div class="row">
 			<p> <i> Skills </i> </p>
-			<ul >
+			<ul class="col-lg-6 col-lg-offset-1">
 				<li> OS : *nix Based OS </li>
-				<li> Databases : MySQL , Redis, MongoDB, ElasticSearch </li>
-				<li> Languages : Java , Python, PHP </li>
+				<li> Databases : MySQL , MongoDB, ElasticSearch, Redis </li>
+				<li> Languages : Python, Java , PHP </li>
 				<li> Web : HTML ,Javascript, D3.js, CSS , jQuery </li>
 				<li> Testing : jUnit Tests </li>
 				<li> Misc : Apache Thrift , RabbitMQ , Zookeeper , Nginx , Jenkins </li>
@@ -107,63 +107,100 @@
 		</div>
 		<div class="row">
 			<p> <i> Work Experience </i> </p>
-			<ul style="color:#42dca3"> <li> <b> Capillary Technologies </b> -  Senior Software Developer  <i> 2012-2014 </i> </li> </ul>
-			<ul>
+            <ul style="color:#42dca3" class="col-lg-9 col-lg-offset-1" > 
+                <li> <b> Apple Inc </b> Software Engineer, iCloud Services  <i> Sept 2016 - Current </i> 
+                </li> 
+            </ul>
+            <ul style="color:#42dca3" class="col-lg-9 col-lg-offset-1" > 
+                <li> <b> Skyhigh Networks </b> -  Intern  <i> May- August 2016 </i> </li> 
+            </ul>
+            <ul class="col-lg-9 col-lg-offset-1" >
+                <li> <u> Quality Metrics Dashboard <u>: </br>
+                    Built a dashboard for use by various teams to gain insights 
+                    about the progress of test automations, stats on job failures and even 
+                    tracking of story point completions for each sprint.
+                    The dashboard was divided into two halves : </br>
+                    <u> Power BI </u> 
+                    The first part of the project deals with getting data out of JIRA and Zephyr and adding it into a database for easier tracking and analytics. This data now feeds into a Microsoft app named Power BI.
+                    Using Power BI, I created two sets of graphs for the Quality Assurance team, and one 
+                    for the Program Management team.
+                    The QA team needed metrics to track the state of all the tests currently being run on their products. The Test Metrics dashboard that I build helped answer questions like  
+                    <i>" How many smoke tests failed last night ? "</i>, <i>"What percent of tests have been automated vs how many are still being run manually ?" </i>, <i>"How many tests have been created per release ? "</i> and various others. 
+                    They also required similar metrics about the types and count of defects being filed on each of their products. The Defects Metrics dashboard that I created helped the QA team 
+                    see a visual representation of various defect trends like <i>" The number of defects being filed vs the number being resolved "</i>, <i>" The number of defects being reopened
+                    after resolution "</i>, <i> a break-up of "all the defects filed on each day by the products" </i> and various others.
+                    The Program Management team required different metrics to track each team's progress
+                    through a sprint and release. I created a Velocity dashboard which visualised the 
+                    number of story points that were still open at the start of every day vs the number
+                    that were resolved. These graphs were further divided by the number of story points 
+                    that were added at the start of the sprint i.e. that were planned, vs the number 
+                    that were added during the sprint i.e unplanned.
+                    This dashboard helped the Program Management team in tailoring the number of tasks 
+                    planned for a sprint for each engineering team, based on their past sprint velocities. 
+
+                    <i style="color:#42dca3"> Tech used : Python ,  MySQL , Power BI </i> </br>
+
+                    <u> Jenkins Dashboard </u> : </br>
+                    The second part of the project required a report on the build information for 
+                    all the automated tests that were executed each day. Since this dashboard needed 
+                    a granular report than the ones created by Power BI, I created a Single Page Application
+                    using the MEAN stack. 
+                    An independent script collected test execution data from Jenkins and stored it in MySQL. 
+                    The dashboard app then allowed the users to select an environment that they want data on, like QA env or Prod env etc. Based on that, the dashboard would list the various projects that had automated tests executed in that environment. Once the users selected a project,
+                    all the tests of that project that have ever been automated is shown. Picking a particular test now gives a report of all the times it has been executed, along with the 
+                    pass or fail state. The failed tests can further be selected to view the stack trace for each failure.
+                    <br/> 
+                    <img src="img/Quality-1.png" height="80%" width="80%"/>
+                    <br/><br/> 
+                    <img src="img/Quality-2.png" height="80%" width="80%"/>
+                    <br/><br/> 
+                    <img src="img/Quality-3.png" height="80%" width="80%"/>
+                    <br/><br/> 
+                    <img src="img/Quality-4.png" height="80%" width="80%"/>
+                    <br/><br/> 
+                    <img src="img/Quality-5.png" height="80%" width="80%"/>
+
+			<ul style="color:#42dca3" class="col-lg-9 col-lg-offset-1" > 
+                <li> <b> Capillary Technologies </b> -  Senior Software Developer  <i> 2012-2014 </i> </li> 
+            </ul>
+			<ul class="col-lg-9 col-lg-offset-1">
 				<li> <u> Subscription Service </u>:­ </br>
-					Led a team to build a module which manages subscriptions of users with retail
+					Led a team in building a module which manages subscriptions of users with retail
 					organizations. This module was a complete rehaul of the old subscription service
-					that was in place, bringing in a more centralized end point. This allowed 10 - 15 of
+					that was in place, bringing in a more centralized end point. This also allowed 10 - 15 of
 					the in­house services to use the module using exposed APIs. <br/>
-					<i style="color:#42dca3"> Tech used : Java , PHP , MySQL , Redis ( as a cache ) , Thrift </i> 
+					<i style="color:#42dca3"> Tech used : Java , PHP , MySQL , Redis ( as a cache ) , Thrift 
+                    </i> 
 				</li>
 				<br/>
 				<li> <u>Bulk Messaging Module</u>:- </br>
-					Part of a 3­member team that was involved in creating Capillary’s Bulk
-					Messaging module. The module completely implemented Publisher­Subscriber
-					model in order to send out promotions and offers, on behalf of our clients to their
-					customers, most often in the orders of millions. Due this high scale, the module
-					had to be available and reliable at all times, not to mention scalable and
-					maintainable as well.
+					The module completely implemented Publisher­-Subscriber model in order to send out promotions and offers, on behalf of our clients to their customers, most often in the orders of millions. Due this high scale, the module had to be available and reliable at all times, as well as mention scalable and maintainable.
 					More info on this project can be found here :
 					<a href="http://technology.capillarytech.com/2014/11/18/mysql­as­a­queue­and­anti­patterns­case­study­of­a­bulk­messaging­system/"> MySQL as a Queue - Antipattern </a>
 					<br/> <i style="color:#42dca3"> Tech Used : Java , PHP , MySQL , RabbitMQ , Thrift</i>
 				</li>
 				<br/>
 				<li> <u>Campaign Shard Service</u>:- <br/>
-					Part of a 3 member team that was involved in creating a service that had to
-					manage basic information of customers which numbered in the order of 10s of
-					millions. A sharding policy was put in place, which enabled us to handle such
-					large data without running into any memory issues by distributing the load into
+					Created a service that had to manage basic information of customers which numbered in the order of 10s of millions. A sharding policy was put in place, which enabled us to handle such large data without running into any memory issues by distributing the load across
 					several different databases.
 					<br/> <i style="color:#42dca3"> Tech Used : Java , PHP , MySQL , Thrift </i> 
 				</li>
 				<br/>
-				<li> <u>Cron Scheduler Service</u>:- </br>
-					Part of a 3 member team that was involved in creating a cron service specific to
-					the cron jobs that were needed in Capillary.
-					<br/> <i style="color:#42dca3"> Tech Used : Java , PHP , MySQL , Thrift </i>
-				</li>
-				<br/>
 				<li> <u>Filter Service</u>:- <br/>
-					Part of a 3 member team that was involved in creating a service which helped in
-					filtering out customers, in the order of tens of millions into groups of thousands,
-					based on filtering criteria. This helped our clients in creating more targeted
-					groups based on KPIs like Avg. Bill Amount, Lifetime purchases etc. Overall more
-					than 50 KPIs have been supported by this service.
+					Created a service which helped in filtering out customers, in the order of tens of millions into groups of thousands, based on various filtering criteria. This helped our clients in creating more targeted groups based on KPIs like Avg. Bill Amount, Lifetime purchases etc. Overall more than 50 KPIs have been supported by this service.
 					<br/> <i style="color:#42dca3"> Tech Used : Java , PHP , MySQL , Thrift </i>	
 				</li>
 			</ul>
 		</div>
 		<div class="row">
 			<p> <i> Academic Projects </i> </p>
-				<ul>
+				<ul class="col-lg-9 col-lg-offset-1" >
 					<li> <u>Visualization for DIG </u>:- <br/>
-                                        	Created a visualization for data present in ElasticSearch for various metrics like 
-                                        	frequency by year, counts based on certain features etc. This was a part of the 
+                        Created a visualization for domain data present in ElasticSearch for various metrics like frequency by year, counts based on certain features etc. This was a part of the 
 						Domain Specific Insight Graphs (DIG) project from the Information Sciences Institute at USC.
 						<br/> <i style="color:#42dca3">Tech Used : AngularJS, ElasticSearch, D3.js, Bootstrap CSS, HTML5 </i>
 						<br/>
-						<img src="img/DIG-Vis.png" height="70%" width="70%">
+						<img src="img/DIG-Vis.png" height="80%" width="80%">
 					</li>
 					<br/>
 					<li> <u>FOSSHelper</u>:- <br/>
@@ -171,8 +208,10 @@
 						recommendation system that helps people to get started with contributing to FOSS.
 						It tailors the recommendations to the user by linking to their LinkedIn account, 
 						and also parses skills listed on their resumes.
-						<br/> <img src="img/FossHelper-1.png" height="70%" width="70%"/>
-                                                <br/> <img src="img/FossHelper-2.png" height="70%" width="70%"/>
+						<br/> 
+                        <img src="img/FossHelper-1.png" height="80%" width="80%"/>
+                        <br/><br/> 
+                        <img src="img/FossHelper-2.png" height="80%" width="80%"/>
 						<br/> <a href="https://github.com/crozzfire/fosshelper">Github Link</a>
 						<br/> <a href="https://www.youtube.com/watch?v=ShyE9dOvO78"> YouTube Demo </a>
 						<br/> <i style="color:#42dca3"> Tech Used : AngularJS, Node.js, Express.js, ElasticSearch, Bootstrap CSS, Jade </i> 
@@ -181,7 +220,7 @@
 		</div>
 		<div class="row">
 			<p> <i> Weekend Hacks </i> </p>
-			<ul>
+			<ul class="col-lg-9 col-lg-offset-1" >
 				<li> <u>Trunc8or</u>:- <br/>
 				Worked on a Chrome extension to help fix a problem I was having with the 140 
 				char limit on Twitter updates. It can be found on the Chrome web store named “Trunc8or”.
@@ -219,8 +258,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
